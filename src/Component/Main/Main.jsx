@@ -1,20 +1,14 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-  Link,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { Header } from '../Header/Header';
 import { Home } from '../Home/Home';
 import { Career } from '../Career/Career';
 import { AboutUs } from '../AboutUs/AboutUs';
 import NotFound from '../NotFound/NotFound';
-
+import './Main.css';
 export function Main() {
   let sidebarDetails = [
-    { id: 1, path: '/home', label: 'Home' },
+    { id: 1, path: '/', label: 'Home' },
     { id: 2, path: '/about-us', label: 'About Us' },
     { id: 3, path: '/career', label: 'Carrer' },
   ];
@@ -42,11 +36,10 @@ export function Main() {
             }}
           >
             <Switch>
-              <Route path="/home" component={Home} />
-              <Route path="/about-us" component={AboutUs} />
-              <Route path="/career" component={Career} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about-us" component={AboutUs} />
+              <Route exact path="/career" component={Career} />
               <Route component={NotFound} />
-              <Redirect from="/" to="/home" />
             </Switch>
           </div>
         </div>
