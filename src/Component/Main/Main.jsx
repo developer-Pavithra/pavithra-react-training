@@ -1,40 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { Header } from '../Header/Header';
-import { Home } from '../Home/Home';
-import { Career } from '../Career/Career';
-import { AboutUs } from '../AboutUs/AboutUs';
-import NotFound from '../NotFound/NotFound';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { AboutUs } from '../../Component/AboutUs/AboutUs';
+import { Career } from '../../Component/Career/Career';
+import { Header } from '../../Component/Header/Header';
+import { Home } from '../../Component/Home/Home';
+import NotFound from '../../Component/NotFound/NotFound';
+import { Sidebar } from '../../Component/Sidebar/Sidebar';
 import './Main.css';
 export function Main() {
-  let sidebarDetails = [
-    { id: 1, path: '/', label: 'Home' },
-    { id: 2, path: '/about-us', label: 'About Us' },
-    { id: 3, path: '/career', label: 'Carrer' },
-  ];
-  console.log('main');
   return (
     <div>
       <Header />
       <Router>
         <div style={{ display: 'flex' }}>
-          <nav style={{ width: '30%' }}>
-            {sidebarDetails.map((item) => {
-              return (
-                <li key={item.id}>
-                  <Link to={item.path}>{item.label}</Link>
-                </li>
-              );
-            })}
-          </nav>
-          <div
-            style={{
-              borderLeft: '2px solid',
-              minHeight: '92vh',
-              marginLeft: '10px',
-              padding: '20px',
-            }}
-          >
+          <Sidebar />
+          <div style={{ margin: '20px' }}>
+            {/* based upon url your component will render */}
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/about-us" component={AboutUs} />
@@ -47,3 +28,6 @@ export function Main() {
     </div>
   );
 }
+
+// router-> based upon path your component will render.
+//spa-> appln without reload your component will render dynamically.

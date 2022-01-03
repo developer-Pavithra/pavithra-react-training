@@ -9,7 +9,7 @@ export function Header() {
         textAlign: 'center',
       }}
     >
-      My App
+      Single Page Application
     </header>
   );
 }
