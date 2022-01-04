@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 export function Lifecycle() {
   const [count, setCount] = useState(0);
-  useEffect(() => {
-    console.log('useEffect');
-  });
+  const [place, setPlace] = useState('chennai');
+
   return (
     <div>
-      <button onClick={setCount(count++)}>clicked {count} times </button>
+      <input
+        type="place"
+        placeholder="Enter Place"
+        onChange={(e) => setPlace(e.target.value)}
+      />
+      <button onClick={() => setCount(count + 1)}>
+        clicked {count} times{' '}
+      </button>
+      <Location place={place} count={count} />
     </div>
+  );
+}
+
+function Location() {
+  return (
+    <>
+      <h5>Location:</h5>
+    </>
   );
 }
