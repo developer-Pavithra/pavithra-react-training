@@ -2,3 +2,15 @@ h1 {
   font-family: Lato;
   text-align: center;
 }
+input {
+  margin: 20px;
+  padding: 5px 10px;
+}
+button {
+  background-color: blue;
+  color: white;
+  border: 1px solid;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+}

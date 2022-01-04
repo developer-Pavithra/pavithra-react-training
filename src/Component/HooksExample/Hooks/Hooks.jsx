@@ -1,7 +1,9 @@
 import React from 'react';
+import './Hooks.css';
+import { UpdateValue } from '../../../Component/HooksExample/ UpdateValue/ UpdateValue';
 export function Hooks() {
   return (
-    <div>
+    <div className="fun-content">
       <h1>Function component</h1>
       <h3>(stateless component)</h3>
       <h4>Hooks</h4>
@@ -12,7 +14,7 @@ export function Hooks() {
       <ol>
         <li>
           <em>useState</em>
-          <
+          <UpdateValue />
         </li>
         <li>useEffect</li>
         <li></li>

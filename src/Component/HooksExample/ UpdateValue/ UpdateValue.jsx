@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 export function UpdateValue() {
   const [details, setDetails] = useState({
     name: 'Yazhini',
@@ -14,15 +14,17 @@ export function UpdateValue() {
   };
   return (
     <div>
-      <form onSubmit={(e) => handleSubmit}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
+          name="name"
           placeholder="Enter Name"
           value={details.name}
           onChange={handleChange}
         />
         <input
           type="number"
+          name="age"
           placeholder="Enter Age"
           value={details.age}
           onChange={handleChange}
