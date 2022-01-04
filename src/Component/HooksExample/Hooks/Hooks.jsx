@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hooks.css';
-import { UpdateValue } from '../../../Component/HooksExample/ UpdateValue/ UpdateValue';
+import { UpdateValue } from '../../../Component/HooksExample/ UpdateValue/UpdateValue';
+import { Lifecycle } from '../../../Component/HooksExample/Lifecycle/Lifecycle';
 export function Hooks() {
   return (
     <div className="fun-content">
@@ -16,7 +17,10 @@ export function Hooks() {
           <em>useState</em>
           <UpdateValue />
         </li>
-        <li>useEffect</li>
+        <li>
+          <em>useEffect</em>
+          <Lifecycle />
+        </li>
         <li></li>
       </ol>
     </div>
