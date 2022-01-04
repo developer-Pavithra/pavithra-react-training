@@ -6,16 +6,17 @@ export function Sidebar() {
     { id: 1, path: '/', label: 'Home' },
     { id: 2, path: '/about-us', label: 'About Us' },
     { id: 3, path: '/career', label: 'Carrer' },
-    {
-      id: 4,
-      path: 'https://www.npmjs.com/package/react-router-dom/v/5.3.0',
-      label: 'NPM',
-    },
-    {
-      id: 4,
-      path: '/error',
-      label: 'error',
-    },
+    // {
+    //   id: 4,
+    //   path: 'https://www.npmjs.com/package/react-router-dom/v/5.3.0',
+    //   label: 'NPM',
+    // },
+    // {
+    //   id: 5,
+    //   path: '/error',
+    //   label: 'error',
+    // },
+    { id: 4, path: '/hooks', label: 'Hooks' },
   ];
   return (
     <div className="sidebar">
