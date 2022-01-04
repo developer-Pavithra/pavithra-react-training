@@ -11,10 +11,10 @@ import './Main.css';
 export function Main() {
   return (
     <div>
+      <Header />
       <Router>
-        <Sidebar />
         <div className="router-outlet">
-          <Header />
+          <Sidebar />
           <div className="content-layer">
             {/* based upon url your component will render */}
             <Switch>
