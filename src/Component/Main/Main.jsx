@@ -8,6 +8,7 @@ import NotFound from '../../Component/NotFound/NotFound';
 import { Sidebar } from '../../Component/Sidebar/Sidebar';
 import { Hooks } from '../../Component/HooksExample/Hooks/Hooks';
 import './Main.css';
+import { Lifecycle } from '../../Component/Lifecycle/Lifecycle';
 export function Main() {
   return (
     <div>
@@ -22,6 +23,7 @@ export function Main() {
               <Route exact path="/about-us" component={AboutUs} />
               <Route exact path="/career" component={Career} />
               <Route exact path="/hooks" component={Hooks} />
+              <Route exact path="/lifecycle" component={Lifecycle} />
               <Route component={NotFound} />
             </Switch>
           </div>

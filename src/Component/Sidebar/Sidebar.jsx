@@ -17,6 +17,7 @@ export function Sidebar() {
     //   label: 'error',
     // },
     { id: 4, path: '/hooks', label: 'Hooks' },
+    { id: 5, path: '/lifecycle', label: 'Lifecycle' },
   ];
   return (
     <div className="sidebar">

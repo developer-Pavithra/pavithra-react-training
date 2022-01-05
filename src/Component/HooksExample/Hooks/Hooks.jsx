@@ -1,6 +1,7 @@
 import React from 'react';
 import { UpdateValue } from '../../../Component/HooksExample/ UpdateValue/ UpdateValue';
 import { Lifecycle } from '../../../Component/HooksExample/Lifecycle/Lifecycle';
+import { UncontrolledComponent } from '../../../Component/HooksExample/UncontrolledComponent/UncontrolledComponent';
 import './Hooks.css';
 
 export function Hooks() {
@@ -20,6 +21,10 @@ export function Hooks() {
         <li>
           <em>useEffect</em>
           <Lifecycle />
+        </li>
+        <li>
+          <em>useRef</em>
+          <UncontrolledComponent />
         </li>
       </ol>
     </div>
