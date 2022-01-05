@@ -10,7 +10,7 @@ export function Lifecycle() {
   // useEffect ->lifecycle
   // component intialize (mounting phase),
   // component state, props- updateing phase  ,
-  // compnent destroy (unmounting phase)
+  // component destroy (unmounting phase)
 
   // useEffect(() => {
   //   console.log('trigger -all time');
