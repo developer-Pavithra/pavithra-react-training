@@ -5,7 +5,7 @@ export function Lifecycle() {
   const [place, setPlace] = useState('chennai');
 
   // stage by stage
-  // (child,eldr,old)
+  // (child,elder,old)
 
   // useEffect ->lifecycle
   // component intialize (mounting phase),
