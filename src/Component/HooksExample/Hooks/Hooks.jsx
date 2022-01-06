@@ -9,7 +9,7 @@ export function Hooks() {
     <div className="fun-content">
       <h4>Function Component</h4>
       <h5>
-        (stateless componenthooks feature react16+ some addition feature
+        (stateless component hooks feature react16+ some addition feature
         -useState,useEffect,useCallback,useRef,useDispatch etc..,) without
         writing a class
       </h5>
