@@ -6,48 +6,49 @@ export class Lifecycle extends Component {
     this.state = {
       count: 0,
       details: {
-        city: '',
-        state: '',
+        city: 'chennai',
+        state: '€TN',
       },
     };
   }
-  componentDidMount() {
-    console.log('mounting');
-    this.timer = setInterval(() => {
-      this.setState({ count: this.state.count + 1 });
-    }, 1000);
-  }
-  shouldComponentUpdate() {
-    if (this.state.count === 10) {
-      return false;
-    }
-    return true;
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.details.city !== this.state.details.city) {
-      console.log(prevState.details.city, this.state.details.city);
-    }
-  }
-  componentWillUnMount() {
-    clearInterval(this.timer);
-  }
   handleChange = (e) => {
     let { name, value } = e.target;
-    let details = { ...this.state.details };
-    details[name] = value;
-    this.setState({ details });
+    // this.setState({ [name]: value });
+    let obj = { ...this.state.details };
+    obj[name] = value;
+
+    this.setState({ details: obj });
   };
+
+  componentDidMount() {
+    console.log('class---mouting');
+  }
+  shouldComponentUpdate() {
+    //readOnly -->mode return false
+    //timer ==10 return false
+    // return false;
+  }
+  // bydefault true  -> thaty state  variable change
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.details.city !== this.state.details.city) {
+      console.log('class--updating');
+    }
+  }
+
+  // componentWillUnMount() {
+  //   alert('destroy');
+  //   console.log('class--unmouting');
+  // }
   render() {
     return (
       <div className="cl-content">
         <h4>Class Component</h4>
         <h5>(stateFull Component) </h5>
-        <ul>1.ComponentDidMount</ul>
-        <ul>2.ShouldComponentUpdate</ul>
-        <ul>3.ComponentDidUpdate</ul>
-        <ul>4.ComponentWillUnMount</ul>
-
-        <h2>Timer: {this.state.count}</h2>
+        <li>1.ComponentDidMount (mounting)</li>
+        <li>2.ShouldComponentUpdate(before update)</li>
+        <li>3.componentDidUpdate(after update [city],state,props change)</li>
+        <li>4.componentWillUnMount(unmouting destroy)</li>
         <em>
           {this.state.details.city} {this.state.details.state}
         </em>

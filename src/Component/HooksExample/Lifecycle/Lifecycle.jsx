@@ -28,6 +28,10 @@ export function Lifecycle() {
     console.log('updating');
   }, [count]);
 
+  useEffect(() => {
+    console.log('updating--place');
+  }, [place]);
+
   // useffect return the return function - unmounting (destroy)
   //clear item , clearInterval
   useEffect(() => {
