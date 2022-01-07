@@ -7,8 +7,10 @@ export function ContextTask() {
   const statusOption = ['Started', 'Progress', 'Completed'];
   return (
     <div className="context-content">
-      <h3>ContextTask</h3>
-      <p>Selected status is {status}</p>
+      <div className="context-inner">
+        <h3>ContextTask</h3>
+        <p>Selected status is {status}</p>
+      </div>
       <StartTask />
     </div>
   );
