@@ -18,6 +18,7 @@ export function Sidebar() {
     // },
     { id: 4, path: '/hooks', label: 'Hooks' },
     { id: 5, path: '/lifecycle', label: 'Lifecycle' },
+    { id: 6, path: '/context', label: 'Context' },
   ];
   return (
     <div className="sidebar">

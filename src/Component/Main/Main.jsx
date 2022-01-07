@@ -9,6 +9,7 @@ import { Sidebar } from '../../Component/Sidebar/Sidebar';
 import { Hooks } from '../../Component/HooksExample/Hooks/Hooks';
 import './Main.css';
 import { Lifecycle } from '../../Component/Lifecycle/Lifecycle';
+import { ContextTask } from '../../Component/HooksExample/ContentTask/ContextTask';
 export function Main() {
   return (
     <div>
@@ -24,6 +25,7 @@ export function Main() {
               <Route exact path="/career" component={Career} />
               <Route exact path="/hooks" component={Hooks} />
               <Route exact path="/lifecycle" component={Lifecycle} />
+              <Route exact path="/context" component={ContextTask} />
               <Route component={NotFound} />
             </Switch>
           </div>
