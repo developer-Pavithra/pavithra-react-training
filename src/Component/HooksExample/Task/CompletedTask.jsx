@@ -4,6 +4,7 @@ export function CompletedTask() {
     <div>
       <hr />
       <h3>CompletedTask</h3>
+      <div></div>
     </div>
   );
 }
