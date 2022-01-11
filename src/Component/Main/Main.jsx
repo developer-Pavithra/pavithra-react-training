@@ -10,6 +10,7 @@ import { Hooks } from '../../Component/HooksExample/Hooks/Hooks';
 import './Main.css';
 import { Lifecycle } from '../../Component/Lifecycle/Lifecycle';
 import { ContextTask } from '../../Component/HooksExample/ContentTask/ContextTask';
+import { StudentForm } from '../../Component/CURD/StudentForm/StudentForm';
 export function Main() {
   return (
     <div>
@@ -26,6 +27,7 @@ export function Main() {
               <Route exact path="/hooks" component={Hooks} />
               <Route exact path="/lifecycle" component={Lifecycle} />
               <Route exact path="/context" component={ContextTask} />
+              <Route exact path="/api-curd" component={StudentForm} />
               <Route component={NotFound} />
             </Switch>
           </div>
