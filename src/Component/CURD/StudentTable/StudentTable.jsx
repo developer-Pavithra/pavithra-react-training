@@ -31,7 +31,7 @@ export function StudentTable() {
     setCount(count + 1);
   };
   return (
-    <div>
+    <div className="student-table">
       <h4>Student Table</h4>
       <table>
         <thead>

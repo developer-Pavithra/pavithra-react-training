@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export function UpdateValue() {
+export function UpdateValue(props) {
   const [details, setDetails] = useState({
     name: '',
     age: '',
