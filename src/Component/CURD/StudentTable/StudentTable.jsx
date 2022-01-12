@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './StudentTable.css';
-export function StudentTable() {
+export function StudentTable(props) {
   let studentURL = {
     getStudentURL: 'https://61dd4f33f60e8f00176686f2.mockapi.io/api/student',
   };
@@ -9,6 +9,7 @@ export function StudentTable() {
   const [tableDetails, setTableDetails] = useState([]);
 
   useEffect(() => {
+    console.log(props);
     getTableDetails();
   }, []);
 
@@ -29,6 +30,19 @@ export function StudentTable() {
   console.log('hiii');
   let handleClick = () => {
     setCount(count + 1);
+  };
+  let handleDelete = (id) => {
+    let url = 'https://61dd4f33f60e8f00176686f2.mockapi.io/api/student';
+    console.log(id, url + '/' + id);
+    axios
+      .delete(`${url}/${id}`)
+      .then((response) => {
+        alert('delete succesfully');
+        getTableDetails();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="student-table">
@@ -58,7 +72,12 @@ export function StudentTable() {
                       <button className="edit-btn">Edit</button>
                     </td>
                     <td>
-                      <button className="delete-btn">Delete</button>
+                      <button
+                        className="delete-btn"
+                        onClick={() => handleDelete(item.id)}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 );
