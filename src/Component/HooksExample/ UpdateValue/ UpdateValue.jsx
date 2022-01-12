@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 export function UpdateValue() {
   const [details, setDetails] = useState({
-    name: 'Yazhini',
-    age: 5,
-    city: 'Chennai',
+    name: '',
+    age: '',
+    city: '',
   });
   let handleChange = (e) => {
     let { name, value } = e.target;

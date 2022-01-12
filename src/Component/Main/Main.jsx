@@ -11,6 +11,7 @@ import './Main.css';
 import { Lifecycle } from '../../Component/Lifecycle/Lifecycle';
 import { ContextTask } from '../../Component/HooksExample/ContentTask/ContextTask';
 import { StudentForm } from '../../Component/CURD/StudentForm/StudentForm';
+import { StudentTable } from '../../Component/CURD/StudentTable/StudentTable';
 export function Main() {
   return (
     <div>
@@ -28,6 +29,7 @@ export function Main() {
               <Route exact path="/lifecycle" component={Lifecycle} />
               <Route exact path="/context" component={ContextTask} />
               <Route exact path="/api-curd" component={StudentForm} />
+              <Route exact path="/student-table" component={StudentTable} />
               <Route component={NotFound} />
             </Switch>
           </div>
